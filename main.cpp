@@ -1,11 +1,9 @@
 #include <iostream>
 
+using namespace std;
+
 int main(void){
 
-    std::string a;
-
-    std::cin >> a;
-    std::cout << a << std::endl;
-
+    std::cout << 1 << std::endl;
     return 0;
 }
