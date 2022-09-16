@@ -1,35 +1,35 @@
-#include <algorithm>
 #include <iostream>
 
 using namespace std;
 
-string a[154];
-int b;
-char res[26];
-bool g = false;
-string str;
+int n;
+string temp;
+char a[154];
+string res;
+
 int main(){
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    cin >> b;
+    cin >> n;
 
-    for (int i = 0; i < b; i++) {
-        cin >> a[i];
-        res[a[i][0] - 'a']++;
+    for (int i = 0; i < n; i++) {
+        cin >> temp;
+        a[temp[0]- 'a']++;
     }
 
     for (int i = 0; i < 26; i++) {
-        if(res[i] > 5) {
-            str = 'a' + i;
-            cout << str;
-            g = true;
+        if(a[i] >= 5) {
+            res += i + 'a';
         }
     }
-    if(!g) cout << "PREDAJA";
-    cout << '\n';
+    if (res.size()) {
+        cout << res << "\n";
+    } else {
+        cout << "PREDAJA" << "\n";
+    }
 
 
     return 0;
